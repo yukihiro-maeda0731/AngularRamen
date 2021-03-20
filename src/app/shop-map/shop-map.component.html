@@ -1,0 +1,6 @@
+<agm-map [zoom]="17" [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng" [label]="label"></agm-marker>
+</agm-map>
+<div class="text-center">
+    <button class="btn btn-success w-50 mt-2" [routerLink]="['/header']" (click)="closeShopMap()">戻る</button>
+</div>

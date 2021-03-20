@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="card bg-warning" style="width: 20rem;" *ngFor="let shop of shops">
+            <div class="card-body" >
+            <h5 class="card-title"></h5>
+                <p scope="row" class="">{{decode(shop.name)}}</p>
+                <p class=""><img src={{decode(shop.image_url.shop_image1)}}/></p>
+                <p class="" ><img src={{decode(shop.image_url.shop_image2)}}/></p>
+                <p class="">{{decode(shop.address)}}</p>
+                <p class="">￥{{decode(shop.budget)}}</p>
+                <div class="text-center">
+                    <button class="btn btn-success" [routerLink]="['/shopMap']" (click)="displayShopMap(shop.latitude, shop.longitude)">ここに行きたい!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
