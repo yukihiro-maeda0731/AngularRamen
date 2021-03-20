@@ -19,7 +19,6 @@ export class ShopsService {
   ngOnInit(): void {
   }
 
-
   searchShops(searchTerm: string, lat: Number, lng: Number): Observable<any> {
     return this.http.get(baseUrl + searchTerm + hit_per_page + '&latitude=' + lat +
       '&longitude=' + lng + range, {
@@ -29,7 +28,4 @@ export class ShopsService {
         }
     });
   }
-
-
-
 }
